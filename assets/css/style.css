@@ -22,8 +22,8 @@ header {
 }
 
 .github-logo {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   left: 20px;
   top: 20px;
@@ -110,4 +110,41 @@ pre {
 #github-repos ul li a:hover {
   color: #3498db;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .github-logo {
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  .github-logo {
+    width: 25px;
+    height: 25px;
+    left: 5px;
+    top: 5px;
+  }
+}
+
 
