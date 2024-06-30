@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
-    <nav>
-      <ul>
-        <li><a href="{{ site.baseurl }}">Home</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+      <nav>
+        <ul>
+          <li><a href="{{ site.baseurl }}">Home</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
+  <main class="container">
     {{ content }}
     <section id="github-repos">
       <h2>My GitHub Repositories</h2>
@@ -23,7 +26,9 @@
     </section>
   </main>
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </div>
   </footer>
   <script>
     async function fetchGitHubRepos() {
