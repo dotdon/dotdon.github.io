@@ -1,0 +1,64 @@
+
+### 7. `assets/css/style.css`
+
+```css
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1e1e1e;
+  color: #c5c6c7;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0b0c10;
+  color: #66fcf1;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2em;
+}
+
+a {
+  color: #45a29e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background-color: #0b0c10;
+  color: #66fcf1;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #0b0c10;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
