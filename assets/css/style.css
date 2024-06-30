@@ -10,6 +10,7 @@ body {
   width: 80%;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 15px;  /* Add padding for small screens */
 }
 
 header {
@@ -115,6 +116,7 @@ pre {
 @media (max-width: 768px) {
   .container {
     width: 90%;
+    padding: 0 10px;  /* Adjust padding for better fit */
   }
 
   .github-logo {
@@ -127,6 +129,7 @@ pre {
   nav ul li {
     display: block;
     margin: 10px 0;
+    text-align: center;
   }
 
   header h1 {
@@ -144,6 +147,10 @@ pre {
     height: 25px;
     left: 5px;
     top: 5px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
   }
 }
 
