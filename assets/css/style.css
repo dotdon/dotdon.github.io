@@ -10,7 +10,7 @@ body {
   width: 80%;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 15px;  /* Add padding for small screens */
+  padding: 0 15px;
 }
 
 header {
@@ -116,7 +116,7 @@ pre {
 @media (max-width: 768px) {
   .container {
     width: 90%;
-    padding: 0 10px;  /* Adjust padding for better fit */
+    padding: 0 10px;
   }
 
   .github-logo {
