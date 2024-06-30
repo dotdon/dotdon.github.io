@@ -1,4 +1,58 @@
-        <!DOCTYPE html>
-        <h href="Skin fix for Apple TV TVOS16.2"</h>
-        <a href="repository.skinshortcuts-1.1.5.zip">repository.skinshortcuts-1.1.5.zip</a>
-        <a href="script.skinhelper-main.zip">script.skinhelper-main.zip</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Dot Don's Projects</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+  <header>
+    <h1><a href="{{ site.baseurl }}">Dot Don's Projects</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{{ site.baseurl }}">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Welcome to Dot Don's Projects</h1>
+      <p>Here are some of my amazing projects:</p>
+
+      <ul>
+        {% for project in site.projects %}
+          <li>
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a> - {{ project.description }}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section id="github-repos">
+      <h2>My GitHub Repositories</h2>
+      <ul id="repo-list"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+  <script>
+    async function fetchGitHubRepos() {
+      const response = await fetch('https://api.github.com/users/dotdon/repos');
+      const repos = await response.json();
+      const repoList = document.getElementById('repo-list');
+
+      repos.forEach(repo => {
+        const listItem = document.createElement('li');
+        const repoLink = document.createElement('a');
+        repoLink.href = repo.html_url;
+        repoLink.textContent = repo.name;
+        listItem.appendChild(repoLink);
+        repoList.appendChild(listItem);
+      });
+    }
+
+    fetchGitHubRepos();
+  </script>
+</body>
+</html>
