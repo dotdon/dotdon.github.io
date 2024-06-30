@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
+      <a href="https://github.com/dotdon">
+        <img src="{{ "/assets/images/github-logo.png" | relative_url }}" alt="GitHub" class="github-logo">
+      </a>
       <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
       <nav>
         <ul>
@@ -27,7 +30,7 @@
   </main>
   <footer>
     <div class="container">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      <p>&copy; 2024 {{ site.title }}</p>
     </div>
   </footer>
   <script>
@@ -50,3 +53,4 @@
   </script>
 </body>
 </html>
+
